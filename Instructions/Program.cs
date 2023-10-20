@@ -7,16 +7,25 @@
 
             Console.Write("Number=");
             string numberAsString = Console.ReadLine();
-
             int number = int.Parse(numberAsString);
+
             for (int i = 1; i <= number; i++)
             {
-                // block
+                /* 1
                 bool isOdd = i % 2 == 0;
                 if (isOdd)
                 {
                     Console.WriteLine(i);
                 }
+                */
+
+                bool isEven = i % 2 == 1;
+                if (isEven)
+                {
+                    continue;
+                }
+
+                Console.WriteLine(i);
             }
 
         }
