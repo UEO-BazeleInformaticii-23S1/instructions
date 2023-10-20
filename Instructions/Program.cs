@@ -4,6 +4,61 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Meniu:");
+            Console.WriteLine("1) File");
+            Console.WriteLine("2) Edit");
+            Console.WriteLine("3) View");
+            Console.Write("Your option is:");
+            string option = Console.ReadLine();
+            
+
+
+            int optionNumber;
+            if (int.TryParse(option, out optionNumber))
+            {
+                switch (optionNumber)
+                {
+                    case 1:
+                        {
+                            int var = 1;
+                            Console.WriteLine("You have selected File menu.");
+                            Console.WriteLine("Available sub-options are:");
+                            Console.WriteLine("1) New");
+                            Console.WriteLine("2) Open");
+                        }
+                        break;
+
+                    case 2:
+                        {
+                            int var = 1;
+                            Console.WriteLine("You have selected Edit menu.");
+                            Console.WriteLine("Available sub-options are:");
+                            Console.WriteLine("1) Copy");
+                            Console.WriteLine("2) Paste");
+                        }
+                        break;
+
+                    case 3:
+                        Console.WriteLine("You have selected View menu.");
+                        Console.WriteLine("Available sub-options are:");
+                        Console.WriteLine("1) Open");
+                        Console.WriteLine("2) Open With");
+                        break;
+
+                    default:
+                        Console.WriteLine("You selected an invalid menu option.");
+                        break;
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid numeric option.");
+            }
+
+            
+
+
             if (EvaluateCondition(false, "Eval condition1"))
             {
                 Console.WriteLine("Condition1 is true");
